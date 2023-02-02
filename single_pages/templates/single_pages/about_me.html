@@ -1,18 +1,197 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>About me</title>
+    <title>About Jang</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/c2f57fd998.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav>
-  <a href="/blog/">Blog</a>
-  <a href="/about_me/">About me</a>
-</nav>
+{% include 'blog/navbar.html' %}
 
-<h1>안녕하세요. 장동건입니다.</h1>
-<h2>이력</h2>
-<h2>Portfolio</h2>
-<h3>아직 공사중입니다.</h3>
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>안녕하세요. 장동건입니다.</h1>
+                <br/>
+                <p class="lead">
+                    이제 4학년이 됩니다.<br/>
+                    웹 개발과 자격증 시험 공부를 하면서 방학을 보내고 있습니다.
+                </p>
+
+<!--                <ul>-->
+<!--                    <li>WORK EXPERIENCE</li>-->
+<!--                    <ul>-->
+<!--                        <li></li>-->
+<!--                        <li></li>-->
+<!--                    </ul>-->
+<!--                    <li>EDUCATION</li>-->
+<!--                    <ul>-->
+<!--                        <li></li>-->
+<!--                        <li></li>-->
+<!--                        <li></li>-->
+<!--                    </ul>-->
+<!--                    <li>PUBLISH</li>-->
+<!--                    <ul>-->
+<!--                        <li></li>-->
+<!--                    </ul>-->
+<!--                </ul>-->
+
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/my_back.jpg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>To Do List</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#codingtest">
+                    <img class="card-img-top" src="{% static 'single_pages/images/coding.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">코딩 테스트(알고리즘) 준비하기</h5>
+                        <p>책 선정해서 공부하기</p>
+                        <li>이것이 취업을 위한 코딩 테스트다 with 파이썬(한빛미디어)</li>
+                        <li>알고리즘 코딩 테스트(김종관 저)</li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#license">
+                    <img class="card-img-top" src="{% static 'single_pages/images/study.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">여름 전까지 정보처리기사 자격증 취득하기</h5>
+                        <li>필기시험 3.5</li>
+                        <li>실기시험 원서접수 3.28(화) ~ 3.31</li>
+                        <li>실기시험 04.22(토) ~ 05.07</li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#portfolio">
+                    <img class="card-img-top" src="{% static 'single_pages/images/project.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">포트폴리오 준비하기</h5>
+                        <li>개발 블로그 운영</li>
+                        <li>Github</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="codingtest" tabindex="-1" role="dialog" aria-labelledby="codingTestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="codingTestModalLabel">코딩 테스트(알고리즘) 준비하기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/coding.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>책 선정해서 공부하기</p>
+                        <li>이것이 취업을 위한 코딩 테스트다 with 파이썬(한빛미디어)</li>
+                        <li>알고리즘 코딩 테스트(김종관 저)</li>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="license" tabindex="-1" role="dialog" aria-labelledby="licenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="licenseModalLabel">여름 전까지 정보처리기사 자격증 취득하기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/study.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <li>필기시험: 3.5</li>
+                        <li>실기시험 원서접수: 3.28(화) ~ 3.31</li>
+                        <li>실기시험: 04.22(토) ~ 05.07</li>
+<!--                    <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLabel">직장인을 위한 프로그래밍 입문과 업무자동화 활용</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/project.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <li>개발 블로그 운영</li>
+                        <li>Github</li>
+<!--                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 </html>
